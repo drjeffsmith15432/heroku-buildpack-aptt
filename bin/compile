@@ -8,8 +8,10 @@ set -eo pipefail
 # set -x
 
 # parse and derive params
-BUILD_DIR=$1
-CACHE_DIR=$2
+mkdir /app/build
+mkdir /app/cache
+BUILD_DIR=/app/build
+CACHE_DIR=/app/cache
 LP_DIR=`cd $(dirname $0); cd ..; pwd`
 
 function error() {
